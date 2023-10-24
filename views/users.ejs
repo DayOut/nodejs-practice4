@@ -1,0 +1,18 @@
+<%- include('includes/head.ejs') %> 
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <%- include('includes/navigation.ejs') %>
+
+    <div class="list">
+        <ul>
+            <% if (typeof users !== 'undefined' && users.length > 0) { %>
+                <% for (let user of users) {%>
+                    <li><%= user %></li>
+                <% }%>
+            <% } else { %>
+                <li>List is empty!</li>
+            <% } %>
+        </ul>
+    </div>
+<%- include('includes/end.ejs') %>
